@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murli Profile | Facebook</title>
+    <script src="https://kit.fontawesome.com/48a00b8081.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="icon" href="/IMG/facebook.png">
+
+    <style>
+        .firstDiv {
+            background-color: var(--box-bc);
+            width: 100vw;
+        }
+
+        header {
+            width: 120vw;
+        }
+
+        .firstDiv .background {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .firstDiv .background img {
+            border-radius: .4rem;
+            width: 50rem;
+        }
+
+        .firstDiv .background .cover {
+            background-color: var(--box-bc);
+            position: relative;
+            top: -3.6rem;
+            left: 19rem;
+            padding: 0.5rem 0.6rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            color: var(--text-color1);
+
+        }
+
+        .firstDiv .profileName {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 11rem;
+        }
+
+        .firstDiv .profileName .pname img {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 59%;
+            cursor: pointer;
+
+        }
+
+        .firstDiv .profileName .pname {
+            display: flex;
+        }
+
+        .firstDiv .profileName .pname .nameF {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            text-align: left;
+            padding-left: 0.5rem;
+            gap: 0.3rem;
+            cursor: pointer;
+            color: var(--text-color1);
+
+        }
+
+        .firstDiv .nameF .Murli {
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-color1);
+        }
+
+        .firstDiv .profileName .pname .nameF .images img {
+            width: 2rem;
+            height: 2rem;
+            cursor: pointer;
+        }
+
+        .firstDiv .addStory .btn1 {
+            background: #0052ff;
+            color: white;
+            border: none;
+            padding: 0.6rem 1.3rem;
+            border-radius: 0.2rem;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .firstDiv .addStory .btn2 {
+            background-color: var(--share-hover);
+            border: none;
+            padding: 0.6rem 1.3rem;
+            border-radius: 0.2rem;
+            font-weight: bolder;
+            cursor: pointer;
+            color: var(--text-color1);
+
+        }
+
+        .firstDiv .navi {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 15rem;
+            padding: 1rem 0;
+        }
+
+        .firstDiv .navi ul {
+            display: flex;
+            gap: .1rem;
+        }
+
+        .firstDiv .navi ul li {
+            list-style: none;
+            padding: 0.4rem 0.6rem;
+            border-radius: 0.2rem;
+        }
+
+        .firstDiv .navi ul li:hover {
+            background-color: var(--share-hover);
+        }
+
+        .firstDiv .navi ul li a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .firstDiv .navi ul li a:hover {
+            color: blue;
+
+        }
+
+        .firstDiv .line {
+            border: 1px solid gray;
+            width: 50%;
+            margin: auto;
+            margin-top: 1.5rem;
+        }
+
+        .firstDiv .more {
+            padding: 0.6rem 0.9rem;
+            background: var(--share-bc1);
+            border-radius: 0.3rem;
+        }
+
+        /* BOTTOMDIV */
+        section .bottomDiv {
+            /* background-color: blue; */
+            /* width: 56rem; */
+            margin: auto;
+            margin-top: 1rem;
+        }
+
+        .bottomDiv .locked {
+            display: flex;
+            align-items: center;
+            width: 24rem;
+            background-color: var(--box-bc);
+            gap: 1rem;
+            border-radius: .4rem;
+        }
+
+        .bottomDiv .locked {
+            padding: .5rem 1rem;
+        }
+
+        .bottomDiv .locked i {
+            font-size: 2rem;
+            color: blue;
+            border: 2px solid;
+            border-radius: 50%;
+            padding: 0.4rem;
+        }
+
+        .bottomDiv .locked .lock {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+        }
+
+        .bottomDiv .locked .lock .lm {
+            color: blue;
+            cursor: pointer;
+        }
+
+        .bottomDiv .locked .lock .lm:hover {
+            text-decoration: underline;
+            transition: all 1s;
+
+        }
+
+        .bottomDiv .search-activity {
+            /* width: 37.5vw; */
+            border-radius: 0.6rem;
+            background-color: var(--box-bc);
+            padding: .5rem;
+        }
+
+        .bottomDiv .search-activity .searchBox {
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+        }
+
+        .bottomDiv .search-activity i {
+            font-size: 2.3rem;
+            color: var(--text-c);
+            cursor: pointer;
+        }
+
+        .search-activity .searchBox input {
+            width: 30vw;
+            height: 6vh;
+            border-radius: 3rem;
+            outline: none;
+            border: none;
+            background-color: var(--share-bc);
+            padding-left: 1rem;
+        }
+
+        .search-activity .searchBox input::placeholder {
+            color: rgb(87, 88, 91);
+            font-weight: bolder;
+            font-size: 1rem;
+
+        }
+
+        .search-activity .live-video-feeling {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding-top: .8rem;
+
+        }
+
+        .search-activity .live-video-feeling span {
+            padding: .7rem 1rem;
+            border-radius: .3rem;
+            color: gray;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+
+        .search-activity .live-video-feeling span:hover {
+            background-color: var(--share-bc1);
+        }
+
+        .search-activity .live-video-feeling i {
+            font-size: 1.2rem;
+            padding-right: .5rem;
+        }
+
+        .bottomDiv .firstdiv1 {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            color: var(--text-color1);
+        }
+
+        .bottomDiv {
+            color: var(--text-color1);
+        }
+
+        .bottomDiv .firstdiv2 {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: .5rem;
+        }
+
+        .bottomDiv .firstdiv2 .intro {
+            background-color: var(--box-bc);
+            border-radius: 0.6rem;
+            padding: 1rem 0;
+
+        }
+
+        .bottomDiv .firstdiv2 .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: .8rem;
+            width: 24rem;
+        }
+
+        .bottomDiv .firstdiv2 .intro a {
+            text-decoration: none;
+            color: var(--text-color1);
+        }
+
+        .bottomDiv .firstdiv2 .intro span {
+
+            background-color: var(--share-bc1);
+            padding: 0.6rem;
+            min-width: 19rem;
+            border-radius: 0.4rem;
+            text-align: center;
+        }
+
+        .bottomDiv .firstdiv2 .intro p {
+            padding: .5rem;
+        }
+
+        .bottomDiv .firstdiv2 .intro p a:hover {
+            text-decoration: underline;
+        }
+
+        .firstdiv2 .posts1 {
+            background-color: var(--box-bc);
+            border-radius: 0.6rem;
+            padding: 1.2rem;
+        }
+
+        .firstdiv2 .postV {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .firstdiv2 .filt span {
+            padding: 0.8rem 1rem;
+            background: var(--share-bc1);
+            border-radius: 0.3rem;
+            cursor: pointer;
+
+        }
+
+        .filt .filt1 {
+            color: var(--text-color1);
+        }
+
+        .firstdiv2 .listview {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .firstdiv2 .listview span {
+            background-color: var(--share-bc1);
+            padding: 1rem 5.3rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            color: var(--text-color1);
+        }
+
+        .firstdiv12 .photos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .firstdiv12 .photos span {
+            color: blue;
+            background: var(--share-bc1);
+            padding: 0.8rem 1rem;
+            border-radius: 0.3rem;
+            cursor: pointer;
+        }
+
+        .footer ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .footer ul li {
+            list-style: none;
+            color: gray;
+            cursor: pointer;
+        }
+
+
+
+        @media screen and (max-width:1000px) and (min-width:0px) {
+            .firstDiv {
+                width: 75rem;
+            }
+
+            header {
+                width: 75rem;
+            }
+
+            .bottomDiv .firstdiv1 {
+                gap: 2rem;
+
+            }
+
+            section .bottomDiv {
+                gap: 2rem;
+            }
+
+            .bottomDiv .firstdiv2 {
+                gap: 2rem;
+            }
+        }
+
+
+
+
+        @media screen and (max-width:1000px) and (min-width:0px) {
+            .bottomDiv {
+                display: flex;
+                width: 75rem;
+                flex-basis: w;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            section .bottomDiv {
+                gap: 2rem;
+            }
+
+            .bottomDiv .firstdiv1 {
+                gap: 2rem;
+
+            }
+
+            .bottomDiv .firstdiv2 {
+                gap: 2rem;
+            }
+
+            .bottomDiv .locked {
+                flex: 25rem;
+                padding: 3rem;
+            }
+
+            .search-activity {
+                flex: 40rem;
+            }
+
+            .search-activity .searchBox input {
+                width: 27rem;
+            }
+
+            .bottomDiv .firstdiv2 .intro {
+                width: 61rem;
+                padding: 3rem;
+
+            }
+
+            .firstdiv2 .posts1 {
+                padding: 3rem;
+                width: 61rem;
+
+            }
+
+            .posts1 {
+                width: 56rem;
+            }
+
+            .bottomDiv .search-activity {
+                padding: 3rem;
+            }
+
+        }
+
+        @media screen and (max-width:350px) and (min-width:0px) {
+            .footer {
+                position: fixed;
+                bottom: 1%;
+            }
+
+            section .bottomDiv {
+                gap: 2rem;
+            }
+
+            .bottomDiv .firstdiv1 {
+                gap: 2rem;
+
+            }
+
+            .bottomDiv .firstdiv2 {
+                gap: 2rem;
+            }
+
+
+
+        }
+
+        @media screen and (max-width:500px) and (min-width:0px) {
+            .firstDiv .nameF .Murli {
+                font-size: 3rem;
+                cursor: pointer;
+            }
+
+            section .bottomDiv {
+                gap: 2rem;
+            }
+
+            .bottomDiv .firstdiv1 {
+                gap: 2rem;
+
+            }
+
+            .bottomDiv .firstdiv2 {
+                gap: 2rem;
+            }
+
+            .firstDiv .nameF span {
+                font-size: 2rem;
+            }
+
+            .btn1,
+            .btn2 {
+                font-size: 1.5rem;
+            }
+
+            .firstDiv .navi {
+                display: flex;
+                font-size: 1.7rem;
+            }
+
+            .firstDiv .line {
+                width: 68%;
+            }
+
+            .lock span {
+                font-size: 3rem;
+            }
+
+            .lock .lm {
+                font-size: 2rem;
+            }
+
+            .search-activity .searchBox input::placeholder {
+                font-size: 2rem;
+            }
+
+            .search-activity .searchBox input {
+                height: 9vh;
+                width: 27rem;
+            }
+
+            .search-activity .live-video-feeling span {
+                font-size: 1.5rem;
+            }
+
+            .firstdiv2 h2 {
+                font-size: 3rem;
+            }
+
+            .firstdiv2 span,
+            p {
+                font-size: 2rem;
+            }
+
+            .bottomDiv .firstdiv2 .intro {
+                width: 67rem;
+                padding: 3rem;
+
+            }
+
+            .firstdiv2 .posts1 {
+                padding: 3rem;
+                width: 67rem;
+
+            }
+        }
+
+        @media screen and (max-width:293px) and (min-width:0px) {
+
+            header {
+                width: 73rem;
+            }
+
+            .firstDiv .profileName .pname {
+                justify-content: center;
+                align-items: center;
+            }
+
+            .firstDiv .profileName .pname img {
+                width: 7rem;
+                height: 7rem;
+
+            }
+        }
+
+
+        @media screen and (min-width:1000px) and (max-width:1450px) {
+            .firstDiv {
+                width: 124rem;
+            }
+
+            header {
+                width: 124rem;
+            }
+
+            section .bottomDiv {
+                width: 122rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo-search">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><input type="text" placeholder="Search Facebook"><i
+                            class="fa-solid fa-magnifying-glass Search"></i> </li>
+
+                    <li class="hide-menu">
+
+                        <input type="checkbox" id="check">
+                        <label for="check">
+
+                            <i class="fa-solid fa-bars" id="btn"></i>
+
+                        </label>
+                        <ul class="submenu">
+
+                            <li class="mp"><a href="/MurliProfile.html"><img src="/IMG/user.png" alt="" class="user1">
+                                    <span>&nbsp; Murli
+                                    </span></a></li>
+                            <li class="mp"><a href="/Facebook.html"><i class="fa-solid fa-house"></i> &nbsp; Home</a>
+                            </li>
+                            <!-- <li class="mp"><a href="/watch.html"><i class="fa-solid fa-tv"></i> &nbsp;Watch</a></li> -->
+                            <li class="mp"><a href="/watch.html"><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt=""
+                                        class="user1"><span>&nbsp;Watch</span></a></li>
+                            <li class="mp"><a href="/watch.html"><i class="fa-solid fa-store k"></i> &nbsp; Store</a>
+                            </li>
+                            <li class="mp"><a href="/watch.html"><i class="fa-solid fa-users-line"></i> &nbsp; Teams</a>
+                            </li>
+                            <li class="mp"><a href="/watch.html"><i class="fa-solid fa-dice-d6 k"></i> &nbsp; Games</a>
+                            </li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png" alt=""
+                                        class="user1"><span>&nbsp;Friends</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png" alt=""
+                                        class="user1"><span>&nbsp;Groups</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt=""
+                                        class="user1"><span>&nbsp;Watch</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/AYj2837MmgX.png" alt=""
+                                        class="user1"><span>&nbsp;Memories</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png" alt=""
+                                        class="user1"><span>&nbsp;Saved</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png" alt=""
+                                        class="user1"><span>&nbsp;Pages</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/9-o1e6LN_TX.png" alt=""
+                                        class="user1"><span>&nbsp;Events</span></a></li>
+                            <li class="dropdown-content mp mr"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/Zy9sJGThmCS.png" alt=""
+                                        class="drop-down user1"><span>&nbsp; Favourites</span></a>
+                            <li class="mp mr"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/FGO-FBo3R2E.png" alt=""
+                                        class="user1 "><span>&nbsp;More Recent</span></a></li>
+                            <li class="mp mr"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png" alt=""
+                                        class="user1"><span>&nbsp;Marketplace</span></a></li>
+                            <!-- <li class="dropdown-content"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/WreZVYrGEZH.png" alt=""
+                                        class="drop-down"><span>Community Help</span></a>
+                            </li> -->
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="feed">
+                <ul class="j">
+                    <li><a href="/Facebook.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/watch.html"><i class="fa-solid fa-tv"></i></a></li>
+                    <li><a href="/watch.html"><i class="fa-solid fa-store"></i></a></li>
+                    <!-- <li><i class="fa-solid fa-users-line"></i></li> -->
+                    <li><a href="/watch.html"><i class="fa-solid fa-users-line"></i></a></li>
+                    <li><a href="/watch.html"><i class="fa-solid fa-dice-d6"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="chat-user">
+                <ul>
+                    <li class="account"><a href=""><i class="fa-solid fa-circle-user user"></i><span>Murli</span> </a>
+                    </li>
+                    <li class="share show-bar"><a href=""><i class="fa-solid fa-bars"></i></a></li>
+                    <li class="share hide-plus"><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                    <li class="share"><a href=""><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li class="share"><a href=""><i class="fa-solid fa-bell"></i></a></li>
+                    <li class="share " ><a href=""><i class="fa-solid fa-circle-chevron-down down"></i></a></li>
+
+                    <li class="share theme">
+                        <img src="/IMG/sun.png" alt="" id="icon">
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <section>
+        <div class="firstDiv">
+            <div class="background">
+                <img src="/IMG/place.jpg" alt="Image">
+                <div class="cover">
+                    <span><i class="fa-solid fa-camera"></i>&nbsp; Edit Cover Photo</span>
+                </div>
+            </div>
+
+
+
+            <div class="profileName">
+
+                <div class="pname">
+                    <img src="/IMG/Murli4.jpg" alt="">
+                    <div class="nameF">
+                        <span class="Murli">Murli Palav</span>
+                        <span>2M Friends</span>
+                        <div class="images">
+                            <img src="/IMG/Murli4.jpg" alt="">
+                            <img src="/IMG/Murli4.jpg" alt="">
+                            <img src="/IMG/Murli4.jpg" alt="">
+                            <img src="/IMG/Murli4.jpg" alt="">
+                            <img src="/IMG/Murli4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="addStory">
+                    <button class="btn1"><i class="fa-solid fa-circle-plus "></i>&nbsp; Add to Story</button>
+                    <button class="btn2"><i class="fa-solid fa-pen-to-square"></i>&nbsp; Edit Profile</button>
+                </div>
+
+            </div>
+            <div class="line"></div>
+
+            <div class="navi">
+                <div class="data">
+                    <ul>
+                        <li><a href="/Facebook.html">Posts</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Friends</a></li>
+                        <li><a href="">Photos</a></li>
+                        <li><a href="">Videos</a></li>
+                        <li><a href="">Check-Ins</a></li>
+                        <li><a href="">More</a></li>
+                    </ul>
+
+                </div>
+                <div class="more">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="bottomDiv">
+            <div class="firstdiv1">
+                <div class="locked">
+                    <span><i class="fa-sharp fa-solid fa-shield-halved"></i></span>
+                    <div class="lock">
+                        <span>You locked your profile</span>
+                        <span class="lm">Learn More</span>
+                    </div>
+                </div>
+
+
+                <div class="search-activity">
+
+                    <div class="searchBox">
+                        <div class="user">
+                            <i class="fa-solid fa-circle-user"></i>
+                        </div>
+                        <div class="searchBar">
+                            <input type="text" placeholder="What's on your mind, Murli?">
+                        </div>
+                    </div>
+
+                    <div class="live-video-feeling">
+                        <span class="vid"><i class="fa-solid fa-video" style="color:rgb(255, 0, 166);"></i>Live
+                            Video</span>
+                        <span><i class="fa-solid fa-images" style="color:rgb(5, 180, 5);"></i>Photo/Video</span>
+                        <span><i class="fa-solid fa-face-smile" style="color:rgb(7, 200, 243);"></i>Life event</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="firstdiv2">
+
+                <div class="intro">
+                    <h2>Intro</h2>
+                    <span><a href="">Add Bio</a></span>
+                    <p><i class="fa-solid fa-house"></i>&nbsp; Lives in <a href=""
+                            style="    color: var(--text-color1);">Mumbai,Maharashtra</a></p>
+                    <span><a href="">Edit Details</a></span>
+                    <span><a href="">Add Hobbies</a></span>
+                    <span><a href="">Add Featured</a></span>
+                </div>
+
+                <div class="posts1">
+                    <div class="postV">
+
+                        <h2>Posts</h2>
+                        <div class="filt">
+                            <span class="filt1"><i class="fa-solid fa-cog fa-spin setting"></i>&nbsp;Filters</span>
+                            <span> <i class="fas fa-cog fa-spin setting"></i>&nbsp;Manage posts</span>
+                        </div>
+                    </div>
+
+                    <div class="listview">
+                        <span><i class="fa-solid fa-list"></i>&nbsp;List View</span>
+                        <span><i class="fa-solid fa-list"></i>&nbsp;Grid View</span>
+                    </div>
+
+                    <div class="firstdiv12">
+                        <div class="photos">
+                            <h2>Photos</h2>
+                            <span>See all Photos</span>
+                        </div>
+                    </div>
+
+                    <div class="firstdiv12">
+                        <div class="photos">
+                            <h2>Stories</h2>
+                            <span>See all Stories</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <ul>
+                    <li>Privacy</li>
+                    <li>Terms</li>
+                    <li>Advertisements</li>
+                    <li>Ad Choices</li>
+                    <li>Cookies</li>
+                    <li>More</li>
+                    <li>Meta</li>
+                    <li>2022</li>
+                </ul>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+    <script src="/JS/Script.js"></script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/48a00b8081.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="icon" href="/IMG/facebook.png">
+
+    <title>Watch | Facebook</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@1,800&family=Arvo&family=Bree+Serif&family=Clicker+Script&family=Courgette&family=Libre+Baskerville:wght@700&family=Nunito:wght@300&family=Orelega+One&family=PT+Serif:ital,wght@1,700&family=Pacifico&family=Roboto+Slab:wght@600&family=Signika+Negative:wght@300&family=Yantramanav&display=swap');
+
+        * {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .leftMenu {
+            background-color: var(--box-bc);
+            padding: 1rem;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            gap: 1rem;
+            top: 9.6%;
+        }
+
+        header {
+            background-color: var(--box-bc);
+            position: fixed;
+            top: 0;
+            width: 120vw;
+            z-index: 10;
+        }
+
+        .leftMenu .ws {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 1rem;
+        }
+
+        .leftMenu .ws span {
+            font-size: 1.5rem;
+        }
+
+        .leftMenu .Search {
+            position: relative;
+            top: .2rem;
+            color: gray;
+            border-radius: 100%;
+            font-size: .9rem;
+            z-index: 11;
+            left: 0.7rem;
+        }
+
+        .leftMenu .searchBox {
+            padding-left: 1.3rem;
+        }
+
+
+        .leftMenu .searhInput {
+            position: relative;
+            left: -1.4rem;
+            top: 0.2rem;
+            color: gray;
+            background-color: var(--background-color);
+            padding: 0.6rem;
+            font-size: .9rem;
+            outline: none;
+            border: none;
+            width: 20rem;
+            border-radius: 1rem;
+            padding-left: 2.1rem;
+        }
+
+        .Search::placeholder {
+            font-family: 'Roboto Slab', serif;
+            font-size: 1rem;
+            color: var(--input-color);
+        }
+
+        .leftMenu .morewatch li {
+            list-style: none;
+            padding: .6rem 1rem .6rem 0rem;
+            display: flex;
+            border-radius: .5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .leftMenu .morewatch li:hover {
+            background-color: var(--share-bc1);
+        }
+
+        .leftMenu .morewatch li a {
+            text-decoration: none;
+            color: var(--text-color1);
+            padding: 0.5rem 0rem 0.5rem 2rem;
+            transition: all .2s;
+            border-radius: .5rem;
+        }
+
+        .leftMenu .morewatch ul .a {
+            background-color: var(--share-bc1);
+        }
+
+        .leftMenu .morewatch .fa-tv {
+            color: rgb(0, 106, 255);
+        }
+
+        .leftMenu .morewatch li a:hover {
+            background-color: var(--share-bc1);
+            color: rgb(0, 106, 255);
+        }
+
+        .leftMenu .searhInput {
+            background-color: var(--input-background-color);
+        }
+
+        .leftMenu .searchBox input::placeholder {
+            color: var(--input-color);
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        /*  */
+        .rightside {
+            width: 59vw;
+            margin: auto;
+            position: absolute;
+            margin-top: 1rem;
+            left: 33%;
+            top: 10%;
+
+        }
+
+        .leftMenu .ws span {
+            color: var(--text-color1);
+
+        }
+
+        .rightside .dpmore {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rightside .dpfollow img {
+            width: 3rem;
+            border-radius: 100%;
+            object-fit: cover;
+            cursor: pointer;
+
+        }
+
+        .rightside .dpfollow {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            flex-wrap: wrap;
+            /* width: 21rem; */
+            margin: 0.4rem 0.7rem;
+        }
+
+        .rightside .Mored .fa-ellipsis {
+            padding: 0.9rem 1rem;
+            border-radius: 100%;
+            margin-right: 0.7rem;
+        }
+
+        .rightside .Mored .fa-ellipsis:hover {
+            background-color: var(--share-bc1);
+        }
+
+        .rightside .follow {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rightside .follow .date {
+            font-size: .7rem;
+            color: rgb(132, 131, 131);
+        }
+
+        .rightside .dpfollow .foll {
+            color: rgb(0, 81, 255);
+            font-size: .8rem;
+            padding-left: .3rem;
+            cursor: pointer;
+
+        }
+
+        .rightside .caption {
+            margin: 0.9rem;
+        }
+
+        .rightside .photo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightside .photo img {
+            border-radius: 0.6rem;
+        }
+
+        .rightside .rightwatch {
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            background-color: var(--box-bc);
+        }
+
+        .rightside .likesharecmtViews {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            padding: 0 1.5rem;
+        }
+
+        .rightside .likesharecmt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .rightside .likesharecmt .likeIcn,
+        .commentIcn1,
+        .shareIcn1 {
+            text-decoration: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 0.2rem;
+        }
+
+        .rightside .likeIcn:hover {
+            background-color: var(--share-bc1);
+        }
+
+        .rightside .likeIcn a {
+            color: gray;
+        }
+
+        .rightside .shareIcn i {
+            color: gray;
+        }
+
+        .rightside .likeIcn .like:hover {
+            color: blue;
+
+        }
+
+        .rightside .likeIcn span {
+            color: gray;
+        }
+
+        .rightside .likeIcn a {
+            text-decoration: none;
+        }
+
+        .rightside .commentIcn1:hover {
+            background-color: var(--share-bc1);
+            cursor: pointer;
+
+        }
+
+        .rightside .shareIcn1:hover {
+            background-color: var(--share-bc1);
+            cursor: pointer;
+
+        }
+
+        .rightside .commentsviews {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .rightside .commentsviews .emojis {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightside .commentsviews span {
+            font-size: .8rem;
+            color: gray;
+        }
+
+        .rightside .emojis img {
+            width: 1.8rem;
+
+        }
+
+        .rightside .emojis .em {
+            width: 2rem;
+        }
+
+        .rightside .emojis .love {
+            width: 2rem;
+        }
+
+        .rightside .commentIcn1 .area1 {
+            position: absolute;
+            left: -200%;
+            border: 1px solid rgb(11, 58, 246);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--box-bc);
+            border-radius: .3rem;
+            padding: 1rem;
+            z-index: 11;
+        }
+
+        .rightside .commentIcn1 textarea {
+            background-color: var(--box-bc);
+            color: var(--text-color1);
+        }
+
+        .rightside .commentIcn1 .area1 .chat1 {
+            background-color: var(--share-bc1);
+            outline: none;
+            border: 1px solid rgb(11, 58, 246);
+            color: var(--text-color1);
+
+        }
+
+        #areaId1:checked~.area1 {
+            left: 0%;
+
+        }
+
+        .rightside .area1 textarea {
+            border: none;
+            outline: none;
+            font-family: 'Roboto Slab', serif;
+
+        }
+
+        .rightside .area1 .chat1 {
+            padding: .3rem 1.5rem;
+            font-size: 1.2rem;
+            margin: .5rem 0;
+            border-radius: .3rem;
+            background-color: blue;
+            color: white;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .rightside #areaId1 {
+            display: none;
+        }
+
+        .rightside #areaId1 {
+            cursor: pointer;
+        }
+
+
+        .rightside .shareIcn1 .submenu2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+            align-items: center;
+            text-align: center;
+            left: -200%;
+
+            position: absolute;
+            background-color: var(--box-bc);
+            /* transition: all .5s ease; */
+            border: .1rem solid rgb(235, 235, 247);
+            border-radius: .3rem;
+            width: 100%;
+            padding: .3rem;
+
+        }
+
+        #check2:checked~.submenu2 {
+            left: -0%;
+        }
+
+        .rightside .submenu2 li {
+            padding: 1rem;
+            list-style: none;
+            border-radius: .2rem;
+
+        }
+
+        .rightside #check2 {
+            display: none;
+        }
+
+
+        .rightside .submenu2 li:hover {
+            background-color: var(--share-bc);
+        }
+
+        .rightside .submenu2 .fa-whatsapp {
+            color: rgb(3, 203, 3);
+            font-size: 1.5rem;
+        }
+
+        .rightside .submenu2 .fa-instagram {
+            color: rgb(249, 6, 46);
+            font-size: 1.5rem;
+        }
+
+        .rightside .submenu2 .fa-pinterest {
+            color: rgb(250, 9, 9);
+            font-size: 1.5rem;
+        }
+
+        .rightside .submenu2 .fa-twitter {
+            color: rgb(9, 97, 250);
+            font-size: 1.5rem;
+        }
+
+        .rightside .submenu2 .fa-youtube {
+            color: rgb(250, 9, 9);
+            font-size: 1.5rem;
+        }
+
+        .rightside .submenu2 li a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        .rightside video {
+            /* box-sizing: border-box; */
+            /* width: 52rem; */
+            border-radius: .5rem;
+        }
+
+        .rightside .caption h5 {
+            color: var(--text-color1);
+        }
+
+        .rightside .Mored i:hover {
+            background-color: var(--share-bc1);
+        }
+
+        .rightside .Mored i {
+            color: gray;
+        }
+
+        .rightside .dpfollow {
+            color: var(--text-c);
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+
+        .rightside .likesharecmtViews {
+
+            padding-top: 1rem;
+        }
+
+        /* MEDIA START */
+        @media screen and (max-width:1000px) and (min-width:0px) {
+            header {
+                width: 100%;
+            }
+
+            .content {
+                width: 1rem;
+            }
+
+            .rightside {
+                position: relative;
+                margin-top: 5rem;
+                left: 0%;
+            }
+
+            .rightside .rightwatch {
+                width: 100vw;
+                /* width: 33.3rem; */
+            }
+
+            .rightside .watch {
+                padding: 0 0.5rem;
+            }
+
+            .rightside .commentIcn1 .area1 {
+                left: -600%;
+            }
+
+
+            .rightside .photo img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .rightside .photo video {
+                width: 100%;
+            }
+
+            .rightside .commentsviews span {
+                font-size: .8rem;
+                color: gray;
+            }
+
+            .rightside .commentsviews .views {
+                font-size: .8rem;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .rightside .likesharecmtViews {
+                padding: 0;
+            }
+        }
+
+
+        @media screen and (max-width: 5000px) and (min-width: 1001px) {
+            nav {
+                width: 100vw;
+            }
+
+            nav .feed ul {
+                padding-left: 0;
+            }
+
+            nav .logo-search .Search {
+                position: relative;
+                left: -13.5rem;
+                top: -0.1rem;
+                color: gray;
+                font-size: .8rem;
+            }
+
+            nav .feed li {
+                height: 3vh;
+            }
+
+            nav .logo-search input {
+                min-width: 0%;
+                height: 2.8vh;
+            }
+
+            .leftMenu {
+                top: 3.6%;
+            }
+
+            .rightside {
+                top: 4%;
+            }
+
+            .rightside .photo img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .rightside .watch {
+                padding: 0 0.7rem;
+            }
+
+        }
+
+
+        @media screen and (max-width:1300px) and (min-width:1000px) {
+            .rightside {
+                padding-left: 2rem;
+            }
+
+        }
+
+        @media screen and (max-width:541px) and (min-width:0px) {
+            .rightside .rightwatch {
+                width: 35rem;
+            }
+
+        }
+
+        @media screen and (max-width:1000px) and (min-width:0px) {
+            .leftMenu {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:1536px) and (min-width:1535px) {
+
+            .rightside {
+                top: 9%;
+            }
+
+            .leftMenu {
+                top: 8.6%;
+            }
+
+            nav .logo-search input {
+                min-width: 0%;
+                height: 5vh;
+            }
+
+            nav .feed li {
+                height: 7vh;
+            }
+        }
+
+        .rightside .watch {
+            padding-bottom: 1rem;
+        }
+
+        /* MEDIA END */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="logo-search">
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><input type="text" placeholder="Search Facebook"><i
+                            class="fa-solid fa-magnifying-glass Search"></i> </li>
+
+                    <li class="hide-menu">
+
+                        <input type="checkbox" id="check">
+                        <label for="check">
+
+                            <i class="fa-solid fa-bars" id="btn"></i>
+
+                        </label>
+                        <!-- <ul class="submenu">
+                            <li><a href="/Facebook.html"><i class="fa-solid fa-house"></i> &nbsp; Home</a></li>
+                            <li><a href="/watch.html"><i class="fa-solid fa-tv"></i> &nbsp;Watch</a></li>
+                            <li><a href="/watch.html"><i class="fa-solid fa-store k"></i> &nbsp; Store</a></li>
+                            <li><a href="/watch.html"><i class="fa-solid fa-users-line"></i> &nbsp; Teams</a></li>
+                            <li><a href="/watch.html"><i class="fa-solid fa-dice-d6 k"></i> &nbsp; Games</a></li>
+                        </ul>
+                    </li>
+
+                </ul> -->
+                        <ul class="submenu">
+
+                            <li class="mp"><a href="/MurliProfile.html"><img src="/IMG/user.png" alt="" class="user1">
+                                    <span>&nbsp; Murli
+                                    </span></a></li>
+                            <li class="mp"><a href="/Facebook.html"><i class="fa-solid fa-house"></i> &nbsp; Home</a>
+                            </li>
+                            <!-- <li class="mp"><a href="/watch.html"><i class="fa-solid fa-tv"></i> &nbsp;Watch</a></li> -->
+                            <li class="mp"><a href="/watch.html"><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt=""
+                                        class="user1"><span>&nbsp;Watch</span></a></li>
+                            <li class="mp"><a href="/watch.html"><i class="fa-solid fa-store k"></i> &nbsp; Store</a>
+                            </li>
+                            <li class="mp"><a href="/watch.html"><i class="fa-solid fa-users-line"></i> &nbsp; Teams</a>
+                            </li>
+                            <li class="mp"><a href="/watch.html"><i class="fa-solid fa-dice-d6 k"></i> &nbsp; Games</a>
+                            </li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yx/r/-XF4FQcre_i.png" alt=""
+                                        class="user1"><span>&nbsp;Friends</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/mk4dH3FK0jT.png" alt=""
+                                        class="user1"><span>&nbsp;Groups</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yG/r/A1HlI2LVo58.png" alt=""
+                                        class="user1"><span>&nbsp;Watch</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/y7/r/AYj2837MmgX.png" alt=""
+                                        class="user1"><span>&nbsp;Memories</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yr/r/2uPlV4oORjU.png" alt=""
+                                        class="user1"><span>&nbsp;Saved</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yZ/r/i7hepQ2OeZg.png" alt=""
+                                        class="user1"><span>&nbsp;Pages</span></a></li>
+                            <li class="mp"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/9-o1e6LN_TX.png" alt=""
+                                        class="user1"><span>&nbsp;Events</span></a></li>
+                            <li class="dropdown-content mp mr"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/yP/r/Zy9sJGThmCS.png" alt=""
+                                        class="drop-down user1"><span>&nbsp; Favourites</span></a>
+                            <li class="mp mr"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/FGO-FBo3R2E.png" alt=""
+                                        class="user1 "><span>&nbsp;More Recent</span></a></li>
+                            <li class="mp mr"><a href=""><img
+                                        src="https://static.xx.fbcdn.net/rsrc.php/v3/ys/r/9BDqQflVfXI.png" alt=""
+                                        class="user1"><span>&nbsp;Marketplace</span></a></li>
+                            <!-- <li class="dropdown-content"><a href=""><img
+                                src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/WreZVYrGEZH.png" alt=""
+                                class="drop-down"><span>Community Help</span></a>
+                    </li> -->
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="feed">
+                <ul class="j">
+                    <li><a href="/Facebook.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/watch.html"><i class="fa-solid fa-tv"></i></a></li>
+                    <li><a href="/watch.html"><i class="fa-solid fa-store"></i></a></li>
+                    <!-- <li><i class="fa-solid fa-users-line"></i></li> -->
+                    <li><a href="/watch.html"><i class="fa-solid fa-users-line"></i></a></li>
+                    <li><a href="/watch.html"><i class="fa-solid fa-dice-d6"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="chat-user">
+                <ul>
+                    <li class="account"><a href=""><i class="fa-solid fa-circle-user user"></i><span>Murli</span> </a>
+                    </li>
+                    <li class="share show-bar"><a href=""><i class="fa-solid fa-bars"></i></a></li>
+                    <li class="share hide-plus"><a href=""><i class="fa-solid fa-plus"></i></a></li>
+                    <li class="share"><a href=""><i class="fa-brands fa-facebook-messenger"></i></a></li>
+                    <li class="share"><a href=""><i class="fa-solid fa-bell"></i></a></li>
+                    <li class="share "><a href=""><i class="fa-solid fa-circle-chevron-down"></i></a></li>
+
+                    <li class="share theme">
+                        <img src="/IMG/sun.png" alt="" id="icon">
+                    </li>
+
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <div class="content">
+
+
+
+
+        <div class="leftside">
+            <div class="leftMenu">
+                <div class="ws">
+                    <span>
+                        Watch
+                    </span>
+                    <span>
+                        <i class="fas fa-cog fa-spin setting"></i>
+                    </span>
+
+                </div>
+                <div class="searchBox">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass Search"></i>
+                        <input type="text" placeholder="Search Videos" class="searhInput">
+                    </span>
+                </div>
+
+                <div class="morewatch">
+                    <ul>
+                        <li class="a"><a href="/Facebook.html"><i class="fa-solid fa-tv"></i>&nbsp;&nbsp; Home</a></li>
+                        <li><a href="/watch.html"><i class="fa-sharp fa-solid fa-globe"></i>&nbsp;&nbsp; Live</a></li>
+                        <li><a href="/watch.html"><i class="fa-sharp fa-solid fa-video"></i>&nbsp;&nbsp; Shows</a></li>
+                        <li><a href="/watch.html"><i class="fa-solid fa-bookmark"></i>&nbsp; &nbsp; Saved Videos</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="rightside">
+            <div class="rightwatch">
+                <div class="watch">
+
+
+                    <div class="dpmore">
+                        <div class="dpfollow">
+                            <img src="/IMG/avgl.jpg" alt="">&nbsp;&nbsp;
+                            <div class="follow">
+                                <div class="nameFo">
+                                    <span> Avengers Team </span>
+                                    <span class="foll">Follow</span>
+                                </div>
+
+                                <span class="date">October 18 at 11:32 PM </span>
+                            </div>
+                        </div>
+                        <div class="Mored">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="caption">
+                        <h5>Hello Guys...✌️ #TrendingVideo</h5>
+                    </div>
+
+                    <div class="photo">
+                        <!-- <img src="/IMG/Murli4.jpg" alt=""> -->
+                        <video src="/VIDEO/study.mp4" width="500" type="video/mp4" controls></video>
+
+                    </div>
+
+                    <div class="likesharecmtViews">
+
+                        <div class="likesharecmt">
+
+
+                            <div class="likeIcn">
+                                <a href="">
+                                    <i class="fa-solid fa-thumbs-up  like">
+                                        <span class="like">Like</span></i>
+                                </a>
+                            </div>
+
+                            <div class="commentIcn1">
+                                <input type="checkbox" id="areaId1">
+                                <label for="areaId1">
+                                    <i class="fa-solid fa-message" style="color: gray;"></i>
+                                    <span style="color: gray;">Comment</span>
+                                </label>
+
+                                <div class="area1">
+                                    <textarea id="textA" rows="5" cols="50">Hello Murli🔰
+                                    </textarea>
+                                    <input type="button" value="Submit" class="chat1">
+                                </div>
+
+
+                            </div>
+
+                            <div class="shareIcn1">
+                                <input type="checkbox" id="check2">
+                                <label for="check2">
+                                    <i class="fa-solid fa-share" style="color: gray;">&nbsp; </i>
+                                    <span style="color:gray ; ">Share</span>
+                                </label>
+
+                                <ul class="submenu2">
+                                    <li><a href="" class="sh"><i class="fa-brands fa-whatsapp sh2"></i>&nbsp;Whats
+                                            App</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-pinterest"></i>&nbsp;Pinterest</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-twitter"></i>&nbsp;Twitter</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="commentsviews">
+                            <div class="emojis">
+                                <!-- <img src="/IMG/loves.gif" alt="" class="love"> -->
+                                <img src="/IMG/sm.gif" alt=""> &nbsp;
+                                <img src="/IMG/em.gif" alt="" class="em">
+                                <!-- <img src="/IMG/wish.gif" alt="" class="wish"> -->
+                                <img src="/IMG/like1.gif" class="likesIMg" alt="">
+                                <span>and 25M Others</span> &nbsp;
+                            </div>
+                            <div class="views">
+                                <span>5M Comments 50M Views</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--  -->
+            <div class="rightwatch">
+                <div class="watch">
+
+
+                    <div class="dpmore">
+                        <div class="dpfollow">
+                            <img src="/IMG/avgl.jpg" alt="">&nbsp;&nbsp;
+                            <div class="follow">
+                                <div class="nameFo">
+                                    <span> Avengers Team </span>
+                                    <span class="foll">Follow</span>
+                                </div>
+
+                                <span class="date">October 18 at 11:32 PM </span>
+                            </div>
+                        </div>
+                        <div class="Mored">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="caption">
+                        <h5>Hello Guys...✌️ #TrendingVideo</h5>
+                    </div>
+
+                    <div class="photo">
+                        <video src="/VIDEO/night.mp4" width="500" type="video/mp4" controls></video>
+                    </div>
+
+                    <div class="likesharecmtViews">
+
+                        <div class="likesharecmt">
+
+
+                            <div class="likeIcn">
+                                <a href="">
+                                    <i class="fa-solid fa-thumbs-up  like">
+                                        <span class="like">Like</span></i>
+                                </a>
+                            </div>
+
+                            <div class="commentIcn1">
+                                <!-- <input type="checkbox" id="areaId1"> -->
+                                <i class="fa-solid fa-message" style="color: gray;"></i>
+                                <span style="color: gray;">Comment</span>
+                                </label>
+
+                                <!-- <div class="area1">
+                                    <textarea id="textA" rows="5" cols="50">Hello Murli🔰You are Looking Handsome Bro
+                                    </textarea>
+                                    <input type="button" value="Submit" class="chat1">
+                                </div> -->
+
+
+                            </div>
+
+                            <div class="shareIcn1">
+                                <!-- <input type="checkbox" id="check2"> -->
+                                <label for="check2">
+                                    <i class="fa-solid fa-share" style="color: gray;">&nbsp; </i>
+                                    <span style="color:gray ; ">Share</span>
+                                </label>
+
+                                <!-- <ul class="submenu2">
+                                    <li><a href="" class="sh"><i class="fa-brands fa-whatsapp sh2"></i>&nbsp;Whats
+                                            App</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-pinterest"></i>&nbsp;Pinterest</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-twitter"></i>&nbsp;Twitter</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
+                                    </li>
+
+                                </ul> -->
+                            </div>
+                        </div>
+
+
+                        <div class="commentsviews">
+                            <div class="emojis">
+                                <img src="/IMG/loves.gif" alt="" class="love">
+                                <img src="/IMG/em.gif" alt="" class="em">
+                                <img src="/IMG/wish.gif" alt="" class="wish">
+                                <img src="/IMG/like1.gif" class="likesIMg" alt="">
+                                <span>and 25M Others</span>
+                            </div>
+                            <div class="views">
+                                <span>5M Comments</span>&nbsp;
+                                <span>50M Views</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rightwatch">
+                <div class="watch">
+
+
+                    <div class="dpmore">
+                        <div class="dpfollow">
+                            <img src="/IMG/avgl.jpg" alt="">&nbsp;&nbsp;
+                            <div class="follow">
+                                <div class="nameFo">
+                                    <span> Avengers Team </span>
+                                    <span class="foll">Follow</span>
+                                </div>
+
+                                <span class="date">October 18 at 11:32 PM </span>
+                            </div>
+                        </div>
+                        <div class="Mored">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="caption">
+                        <h5>Hello Guys...✌️ #TrendingVideo</h5>
+                    </div>
+
+                    <div class="photo">
+                        <video src="/VIDEO/study.mp4" controls></video>
+                    </div>
+
+                    <div class="likesharecmtViews">
+
+                        <div class="likesharecmt">
+
+
+                            <div class="likeIcn">
+                                <a href="">
+                                    <i class="fa-solid fa-thumbs-up  like">
+                                        <span class="like">Like</span></i>
+                                </a>
+                            </div>
+
+                            <div class="commentIcn1">
+                                <!-- <input type="checkbox" id="areaId1"> -->
+                                <i class="fa-solid fa-message" style="color: gray;"></i>
+                                <span style="color: gray;">Comment</span>
+                                </label>
+
+                                <!-- <div class="area1">
+                                    <textarea id="textA" rows="5" cols="50">Hello Murli🔰You are Looking Handsome Bro
+                                    </textarea>
+                                    <input type="button" value="Submit" class="chat1">
+                                </div> -->
+
+
+                            </div>
+
+                            <div class="shareIcn1">
+                                <!-- <input type="checkbox" id="check2"> -->
+                                <label for="check2">
+                                    <i class="fa-solid fa-share" style="color: gray;">&nbsp; </i>
+                                    <span style="color:gray ; ">Share</span>
+                                </label>
+
+                                <!-- <ul class="submenu2">
+                                    <li><a href="" class="sh"><i class="fa-brands fa-whatsapp sh2"></i>&nbsp;Whats
+                                            App</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-pinterest"></i>&nbsp;Pinterest</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-twitter"></i>&nbsp;Twitter</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
+                                    </li>
+
+                                </ul> -->
+                            </div>
+                        </div>
+
+
+                        <div class="commentsviews">
+                            <div class="emojis">
+                                <img src="/IMG/loves.gif" alt="" class="love">
+                                <img src="/IMG/em.gif" alt="" class="em">
+                                <img src="/IMG/wish.gif" alt="" class="wish">
+                                <img src="/IMG/like1.gif" class="likesIMg" alt="">
+                                <span>and 25M Others</span>
+                            </div>
+                            <div class="views">
+                                <span>5M Comments</span>&nbsp;
+                                <span>50M Views</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rightwatch">
+                <div class="watch">
+
+
+                    <div class="dpmore">
+                        <div class="dpfollow">
+                            <img src="/IMG/avgl.jpg" alt="">&nbsp;&nbsp;
+                            <div class="follow">
+                                <div class="nameFo">
+                                    <span> Avengers Team </span>
+                                    <span class="foll">Follow</span>
+                                </div>
+
+                                <span class="date">October 18 at 11:32 PM </span>
+                            </div>
+                        </div>
+                        <div class="Mored">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                    </div>
+
+                    <div class="caption">
+                        <h5>Hello Guys...✌️ #TrendingVideo</h5>
+                    </div>
+
+                    <div class="photo">
+                        <video src="/VIDEO/night.mp4" width="500" type="video/mp4" controls></video>
+                    </div>
+
+                    <div class="likesharecmtViews">
+
+                        <div class="likesharecmt">
+
+
+                            <div class="likeIcn">
+                                <a href="">
+                                    <i class="fa-solid fa-thumbs-up  like">
+                                        <span class="like">Like</span></i>
+                                </a>
+                            </div>
+
+                            <div class="commentIcn1">
+                                <!-- <input type="checkbox" id="areaId1"> -->
+                                <i class="fa-solid fa-message" style="color: gray;"></i>
+                                <span style="color: gray;">Comment</span>
+                                </label>
+
+                                <!-- <div class="area1">
+                                    <textarea id="textA" rows="5" cols="50">Hello Murli🔰You are Looking Handsome Bro
+                                    </textarea>
+                                    <input type="button" value="Submit" class="chat1">
+                                </div> -->
+
+
+                            </div>
+
+                            <div class="shareIcn1">
+                                <!-- <input type="checkbox" id="check2"> -->
+                                <label for="check2">
+                                    <i class="fa-solid fa-share" style="color: gray;">&nbsp; </i>
+                                    <span style="color:gray ; ">Share</span>
+                                </label>
+
+                                <!-- <ul class="submenu2">
+                                    <li><a href="" class="sh"><i class="fa-brands fa-whatsapp sh2"></i>&nbsp;Whats
+                                            App</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-pinterest"></i>&nbsp;Pinterest</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-twitter"></i>&nbsp;Twitter</a>
+                                    </li>
+                                    <li><a href="" class="sh1"><i class="fa-brands fa-youtube"></i>&nbsp;YouTube</a>
+                                    </li>
+
+                                </ul> -->
+                            </div>
+                        </div>
+
+
+                        <div class="commentsviews">
+                            <div class="emojis">
+                                <img src="/IMG/loves.gif" alt="" class="love">
+                                <img src="/IMG/em.gif" alt="" class="em">
+                                <img src="/IMG/wish.gif" alt="" class="wish">
+                                <img src="/IMG/like1.gif" class="likesIMg" alt="">
+                                <span>and 25M Others</span>
+                            </div>
+                            <div class="views">
+                                <span>5M Comments</span>&nbsp;
+                                <span>50M Views</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--  -->
+        </div>
+</body>
+<script src="/JS/Script.js"></script>
+
+
+</html>

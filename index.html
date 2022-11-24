@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <script src="https://kit.fontawesome.com/48a00b8081.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/CSS/Style.css">
+    <link rel="icon" href="/IMG/facebook.png">
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .murli {
+            position: fixed;
+            bottom: 4%;
+            color: #b1b6b3;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: .9rem;
+            height: 90vh;
+        }
+
+        .container .img i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 18vw;
+            border-radius: 100%;
+            background-image: linear-gradient(-225deg,
+                    #0415f6 0%,
+                    #0990f7 67%,
+                    #2210df 29%,
+                    #0990f7 67%,
+                    #0622f8 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip1 3s linear infinite;
+        }
+
+        @keyframes textclip1 {
+            to {
+                background-position: 100% center;
+            }
+        }
+
+        .container .name .animate-charcter {
+            background-image: linear-gradient(-225deg,
+                    #0415f6 0%,
+                    #0990f7 67%,
+                    #2210df 29%,
+                    #0990f7 67%,
+                    #0622f8 100%);
+            background-size: 200% auto;
+            color: #fff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 1.5s linear infinite;
+            font-size: 5vw;
+        }
+
+        .container .name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        @media screen and (max-width:400px) and (min-width:0px) {
+            .container {
+                gap: .5rem;
+            }
+
+            .container .img i {
+                font-size: 50vw;
+
+            }
+
+            .container .name .animate-charcter {
+                font-size: 6vw;
+            }
+        }
+    </style>
+    <script>
+        setTimeout(function () {
+            window.location.href = 'Facebook.html';
+        }, 5000);
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <!-- <img src="/IMG/facebook1.png" alt="Facebook"> -->
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="name">
+            <span class="animate-charcter">Facebook</span>
+        </div>
+        <p class="murli">
+            @Murli
+        </p>
+    </div>
+</body>
+
+</html>
